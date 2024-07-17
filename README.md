@@ -22,7 +22,11 @@ ZCRM_GRANT_TOKEN=your_zoho_grant_token
 ```
 
 ## Usage
-Run the `run_query.py` script to retrieve and display cleaned product data from Zoho CRM.
+Before using the script you'll need to register your app with Zoho API. A few things to note:
+- The the scope used for this project was `ZohoCRM.modules.products.all` you'll need to include this in your URL request to Zoho.
+- The access / grant token returned from the ZOHO URL request needs to be copied to the `ZCRM_GRANT_TOKEN` environment variable.  
+
+With the above complete. Run the `run_query.py` script to retrieve and display cleaned product data from Zoho CRM.
 
 ```
 python run_query.py
